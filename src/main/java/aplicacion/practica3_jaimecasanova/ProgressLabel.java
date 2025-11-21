@@ -11,7 +11,7 @@ public class ProgressLabel extends VBox {
     private final Label label;
 
     public ProgressLabel() {
-        this (0.0,"listo");
+        this (0.0,"Preparado para descargar");
     }
 
     public ProgressLabel(double progress, String text) {
