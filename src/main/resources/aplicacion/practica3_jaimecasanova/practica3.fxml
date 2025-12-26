@@ -31,16 +31,14 @@
                         </VBox>
                         <VBox stylesheets="@styles.css" alignment="CENTER" spacing="20.0">
                             <children>
-                                <Button fx:id="btnNegrita" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickNegrita" text="Negrita" />
-                                <Button fx:id="btnCursiva" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickCursiva" text="Cursiva" />
-                                <Button fx:id="btnMayus" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickMayus" text="Mayus/Minus" />
-                                <Button fx:id="btnIvertir" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickInvertir" text="Invertir" />
+                                <Button fx:id="btnCambios" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickEstilo" text="Estilos" />
                                 <Button fx:id="btnBusqueda" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickBuscar" text="Búsqueda / Remplazo" />
-                                <Button fx:id="btnReiniciar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickReiniciar" text="Reiniciar" />
                                 <Button fx:id="btnUndo" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickUndo" text="Undo" />
                                 <Button fx:id="btnRedo" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickRedo" text="Redo" />
-                                <Button fx:id="btnGuardar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickGuardar" text="Guardar" />
                                 <Button fx:id="btnCargar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickCargar" text="Cargar" />
+                                <Button fx:id="btnGuardar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickGuardar" text="Guardar" styleClass="btnGuardar" />
+                                <Button fx:id="btnReiniciar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickReiniciar" text="Reiniciar" styleClass="btnReiniciar" />
+
                             </children>
                             <padding>
                                 <Insets left="10.0" right="10.0" />

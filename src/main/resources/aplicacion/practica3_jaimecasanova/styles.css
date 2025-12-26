@@ -24,6 +24,10 @@
     -fx-alignment: CENTER;
 }
 
+.label{
+    -fx-text-fill: #FFFFFF; /* Texto blanco */
+}
+
 /* Estilo base para los botones */
 .button {
     -fx-background-color: #0078D7; /* Azul primario */
@@ -41,6 +45,14 @@
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 0, 4);
+}
+
+.btnReiniciar{
+    -fx-background-color: #b81a1a;
+}
+
+.btnGuardar{
+    -fx-background-color: #0b9e00;
 }
 
 /* Estilo para el Área de Texto y Campo de Texto */

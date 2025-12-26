@@ -216,13 +216,13 @@ public class practica3Controller implements NuiListener {
     public void onCommand(NuiCommand cmd, String texto) {
         switch (cmd) {
             case APLICAR_TAMAÑO:
-                clickMayus(null);
+                clickMayus();
                 break;
             case APLICAR_NEGRITA:
-                clickNegrita(null);
+                clickNegrita();
                 break;
             case APLICAR_CURSIVA:
-                clickCursiva(null);
+                clickCursiva();
                 break;
             case GUARDAR_DOCUMENTO:
                 clickGuardar(null);
@@ -239,7 +239,7 @@ public class practica3Controller implements NuiListener {
                 }
                 break;
             case APLICAR_INVERTIR:
-                clickInvertir(null);
+                clickInvertir();
                 break;
             case UNKNOWN:
                 if (statusLabel != null) statusLabel.setText("Comando no reconocido.");
@@ -275,7 +275,33 @@ public class practica3Controller implements NuiListener {
     }
 
     @FXML
-    void clickMayus(ActionEvent event) {
+    void clickEstilo(ActionEvent event) {
+        try {
+            // Cargar el nuevo archivo FXML
+            FXMLLoader fxmlLoader = new FXMLLoader(main.class.getResource("botonesView.fxml"));
+            Parent root = fxmlLoader.load();
+
+            BotonesController controller = fxmlLoader.getController();
+            controller.setPractica3Controller(this);
+
+
+            // Crear un Stage
+            Stage nuevoStage = new Stage();
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(main.class.getResource("styles.css").toExternalForm());
+
+            nuevoStage.setTitle("Botones - Practica3_JaimeCasanova");
+            nuevoStage.setScene(scene);
+            nuevoStage.show(); // Abre la nueva ventana sin cerrar la anterior
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Error al cargar botonesView.fxml: " + e.getMessage());
+        }
+    }
+
+
+    public void clickMayus() {
         IndexRange selection = txtEditable.getSelection();
 
        //SIN SELECCIÓN
@@ -322,8 +348,8 @@ public class practica3Controller implements NuiListener {
         actualizarArray();
     }
 
-    @FXML
-    void clickNegrita(ActionEvent event) {
+
+    public void clickNegrita() {
         IndexRange selection = txtEditable.getSelection();
 
 
@@ -363,8 +389,8 @@ public class practica3Controller implements NuiListener {
         actualizarArray();
     }
 
-    @FXML
-    void clickCursiva(ActionEvent event) {
+
+    public void clickCursiva() {
         IndexRange selection = txtEditable.getSelection();
 
         // If no selection, use existing logic.
@@ -408,8 +434,7 @@ public class practica3Controller implements NuiListener {
 
     }
 
-    @FXML
-    void clickInvertir(ActionEvent event) {
+    public void clickInvertir() {
         IndexRange selection = txtEditable.getSelection();
 
 
